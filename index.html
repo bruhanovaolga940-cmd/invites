@@ -1,72 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <title>Приглашение</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Приглашение на свадьбу</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
-
 <body>
-    
-    <main>
-        <div class="hearts-bg" id="heartsBg"></div>
-        <div class="container">
-            <!-- <img src="back.png" alt="..." class="bg-img"> -->
-            
 
-        <p class="text-center"> От Ольги и Ивана</p>
-            <div class="hero">
-                <h1>Дорогие Кирилл и Ирина!</h1>
-                <p>Приглашаем на нашу свадьбу</p>
-            </div>
-            <div class="date">
-                <div class="date_box date__month"><p>Май</p></div>
-                <div calss="date_box date__day"><p class="big__p">24</p></div>
-                <div class="date_box date__year"><p>2026</p></div>
-            </div>
-            <div class="adress">
-                <p>Торжественная церимония состоиться в усальбе на улице такой то </p>
-                <p>Время начала - 16:00</p>
-            </div>
-            <div class="dress-cod">
-                <div class="dress-code_desc">
-                    <p>Дресс код: розовые оттенки</p>
-                </div>
-                <div class="palitra">
-                    <div class="palitra_box"></div>
-                    <div class="palitra_box"></div>
-                    <div class="palitra_box"></div>
-                </div>
-            </div>
+  <div class="container">
+    <div class="card">
+      <p class="subtitle">С любовью приглашаем вас</p>
+
+      <h1 class="names">
+        Анна
+        <span class="amp">&amp;</span>
+        Дмитрий
+      </h1>
+
+      <div class="divider"><span>❦</span></div>
+
+      <p class="text">
+        Мы будем счастливы разделить с вами самый важный день нашей жизни
+        и отпраздновать вместе союз двух сердец.
+      </p>
+
+      <div class="details">
+        <div class="detail">
+          <div class="icon">📅</div>
+          <h3>Дата</h3>
+          <p>15 июня 2027 года<br>суббота, 16:00</p>
         </div>
-        
-    </main>
+        <div class="detail">
+          <div class="icon">📍</div>
+          <h3>Место</h3>
+          <p>Ресторан «Сад Роз»<br>ул. Цветочная, 12</p>
+        </div>
+      </div>
 
+      <p class="subtitle">До торжества осталось</p>
+      <div class="countdown" id="countdown">
+        <div><strong id="d">--</strong><small>дней</small></div>
+        <div><strong id="h">--</strong><small>часов</small></div>
+        <div><strong id="m">--</strong><small>минут</small></div>
+        <div><strong id="s">--</strong><small>секунд</small></div>
+      </div>
 
-    
-    <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script>
-    <script>
-  const container = document.getElementById('heartsBg');
-  const COUNT = 120;
-  const frag = document.createDocumentFragment();
+      <button class="btn" id="rsvpBtn">Подтвердить присутствие</button>
+      <p class="rsvp-msg" id="rsvpMsg"></p>
 
-  for (let i = 0; i < COUNT; i++) {
-    const el = document.createElement('span');
+      <p class="footer">Ждём вас с нетерпением!</p>
+    </div>
+  </div>
 
-    el.textContent = '♥';
-    el.style.left     = Math.random() * 100 + 'vw';
-    el.style.top      = Math.random() * 100 + 'vh';
-    el.style.fontSize = (8 + Math.random() * 22) + 'px';       // 8–30px
-    el.style.opacity  = 0.10 + Math.random() * 0.35;           // 0.1–0.45
-    el.style.setProperty('--rot', (Math.random() * 360) + 'deg');
-    el.style.animationDuration   = (6 + Math.random() * 8) + 's';
-    el.style.animationDelay      = '-' + (Math.random() * 10) + 's'; // старт в разнобой
-
-    frag.appendChild(el);
-  }
-  container.appendChild(frag);
-</script>
+  <script src="js/script.js"></script>
+  </script>
 </body>
 </html>

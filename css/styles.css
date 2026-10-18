@@ -1,0 +1,198 @@
+    :root {
+      --rose: #c9a4a0;
+      --rose-dark: #9c6f6a;
+      --cream: #fdf8f3;
+      --gold: #b8976a;
+      --text: #5a4a45;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(135deg, #fdf8f3 0%, #f6e9e4 100%);
+      color: var(--text);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* Декоративные лепестки */
+    .petal {
+      position: fixed;
+      top: -10%;
+      width: 14px;
+      height: 14px;
+      background: radial-gradient(circle at 30% 30%, #f3d6d1, #d9a9a2);
+      border-radius: 0 80% 0 80%;
+      opacity: 0.6;
+      animation: fall linear infinite;
+      pointer-events: none;
+      z-index: 0;
+    }
+    @keyframes fall {
+      to { transform: translateY(110vh) rotate(720deg); }
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(184, 151, 106, 0.35);
+      border-radius: 24px;
+      padding: 50px 30px;
+      box-shadow: 0 20px 60px rgba(156, 111, 106, 0.15);
+      animation: fadeUp 1.2s ease both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .subtitle {
+      font-size: 13px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+
+    .names {
+      font-family: 'Great Vibes', cursive;
+      font-size: clamp(52px, 10vw, 84px);
+      color: var(--rose-dark);
+      line-height: 1.2;
+      margin: 10px 0;
+    }
+
+    .amp {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 36px;
+      color: var(--gold);
+      display: block;
+      margin: -6px 0;
+    }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin: 25px 0;
+      color: var(--gold);
+    }
+    .divider::before, .divider::after {
+      content: "";
+      height: 1px;
+      width: 80px;
+      background: var(--gold);
+      opacity: 0.6;
+    }
+    .divider span { font-size: 20px; }
+
+    .text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      line-height: 1.6;
+      font-style: italic;
+      margin: 20px 0;
+    }
+
+    .details {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin: 35px 0;
+    }
+
+    .detail {
+      padding: 20px;
+      border-radius: 16px;
+      background: var(--cream);
+      border: 1px solid rgba(184, 151, 106, 0.25);
+    }
+    .detail .icon { font-size: 28px; margin-bottom: 8px; }
+    .detail h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--rose-dark);
+      margin-bottom: 6px;
+    }
+    .detail p { font-size: 14px; font-weight: 300; line-height: 1.5; }
+
+    .countdown {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin: 30px 0;
+    }
+    .countdown div {
+      background: var(--rose);
+      color: #fff;
+      border-radius: 14px;
+      width: 80px;
+      padding: 14px 0;
+    }
+    .countdown strong {
+      display: block;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 32px;
+      line-height: 1;
+    }
+    .countdown small {
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      opacity: 0.9;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 14px 40px;
+      border-radius: 50px;
+      background: linear-gradient(135deg, var(--rose), var(--rose-dark));
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      box-shadow: 0 8px 20px rgba(156, 111, 106, 0.3);
+      transition: transform 0.3s, box-shadow 0.3s;
+      border: none;
+      cursor: pointer;
+    }
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px rgba(156, 111, 106, 0.4);
+    }
+
+    .rsvp-msg {
+      margin-top: 15px;
+      font-size: 14px;
+      color: var(--rose-dark);
+      min-height: 20px;
+    }
+
+    .footer {
+      margin-top: 30px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      color: var(--gold);
+    }
+
+    @media (max-width: 480px) {
+      .card { padding: 35px 20px; }
+      .countdown div { width: 68px; }
+    }
