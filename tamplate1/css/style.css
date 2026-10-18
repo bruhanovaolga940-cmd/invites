@@ -63,7 +63,7 @@ p{
     z-index: 1;
     position: relative ;
     width:auto;
-    margin: 50px 30px;
+    margin: 50px 30px 70px 30px;
     padding: 25px 20px;
 background: #ffe9e0;
 background: radial-gradient(circle, rgb(250, 240, 233) 15%, rgba(238, 240, 242, 0) 100%);
