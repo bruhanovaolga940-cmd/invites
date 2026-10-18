@@ -17,7 +17,7 @@ body {
     position: fixed;
     inset: 0;
     pointer-events: none;   /* не мешает кликам */
-    z-index: -1;            /* уходит под контент */
+    z-index: -2;            /* уходит под контент */
     overflow: hidden;
     background-color: #fff5ef;
   }
@@ -33,15 +33,16 @@ body {
     to   { transform: translateY(-18px) rotate(calc(var(--rot) + 12deg)); }
   }
 main{
+    z-index: 1;
     display: flex;
     flex-direction: column;
     height: 100vh;
     align-items: center;
     justify-content: center;
-    background-image: url('verr.png');
+    /* background-image: url('verr.png');
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
+  background-size: contain; */
 }
 h1{
     font-family: 'Great Vibes';
@@ -57,24 +58,15 @@ p{
     flex-direction: column;
 }
 .container{
+    z-index: 1;
     position: relative ;
     width:auto;
     margin: 50px 30px;
     padding: 25px 20px;
-
+background: #ffe9e0;
+background: radial-gradient(circle, rgb(250, 240, 233) 15%, rgba(238, 240, 242, 0) 100%);
     overflow:visible;
 }
-/* .bg-img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  
-  min-width: 90%; 
-  min-height: 90%;
-  
-  z-index: -1;
-} */
 .hero{
     justify-content:center;
     align-items:center;
@@ -128,7 +120,46 @@ p{
 }
 
 .palitra_box{
-    height: 50px;
-    width: 50px;
+    height: 30px;
+    width: 30px;
 }
 
+
+/* цветы по углам*/
+@media(max-width: 768px){
+    .corner-bg {
+  position: fixed;
+  z-index: -1; /* Уводит картинки на самый задний план, под контент */
+  pointer-events: none; /* Позволяет кликать и выделять текст сквозь картинки */
+  width: 100px; /* Ограничиваем максимальный размер картинок (настройте под себя) */
+  height: auto;
+}
+}
+.corner-bg {
+  position: fixed;
+  z-index: -1; /* Уводит картинки на самый задний план, под контент */
+  pointer-events: none; /* Позволяет кликать и выделять текст сквозь картинки */
+  max-width: 200px; /* Ограничиваем максимальный размер картинок (настройте под себя) */
+  height: auto;
+}
+
+/* Позиционирование для каждого угла */
+.top-left {
+  top: 0;
+  left: 0;
+}
+
+.top-right {
+  top: 0;
+  right: 0;
+}
+
+.bottom-left {
+  bottom: 0;
+  left: 0;
+}
+
+.bottom-right {
+  bottom: 0;
+  right: 0;
+}

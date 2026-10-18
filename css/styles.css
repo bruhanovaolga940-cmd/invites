@@ -10,7 +10,7 @@
 
     body {
       font-family: 'Montserrat', sans-serif;
-      background: linear-gradient(135deg, #fdf8f3 0%, #f6e9e4 100%);
+      background: linear-gradient(135deg, #ffc6c6 0%, #fffae1 100%);
       color: var(--text);
       min-height: 100vh;
       overflow-x: hidden;
@@ -38,7 +38,7 @@
       z-index: 1;
       max-width: 720px;
       margin: 0 auto;
-      padding: 60px 20px;
+      padding: 20px 20px;
       text-align: center;
     }
 
@@ -57,6 +57,10 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
+    p{
+        font-family: 'Cormorant Garamond', monospace;
+        font-weight: 400;
+    }
     .subtitle {
       font-size: 13px;
       letter-spacing: 4px;
@@ -67,7 +71,7 @@
 
     .names {
       font-family: 'Great Vibes', cursive;
-      font-size: clamp(52px, 10vw, 84px);
+      font-size: clamp(32px, 10vw, 54px);
       color: var(--rose-dark);
       line-height: 1.2;
       margin: 10px 0;
@@ -87,7 +91,7 @@
       align-items: center;
       justify-content: center;
       gap: 12px;
-      margin: 25px 0;
+      margin: 12px 0;
       color: var(--gold);
     }
     .divider::before, .divider::after {
@@ -101,7 +105,7 @@
 
     .text {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 22px;
+      font-size: 14px;
       line-height: 1.6;
       font-style: italic;
       margin: 20px 0;
