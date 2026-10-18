@@ -1,0 +1,134 @@
+* {
+	padding: 0px;
+	margin: 0px;
+	border: none;
+}
+html,
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	letter-spacing: -0.5px;
+    /* background-color: rgb(255, 235, 215); */
+    color:rgb(25, 0, 11);
+}
+    
+  .hearts-bg {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;   /* не мешает кликам */
+    z-index: -1;            /* уходит под контент */
+    overflow: hidden;
+    background-color: #fff5ef;
+  }
+  .hearts-bg span {
+    position: absolute;
+    line-height: 1;
+    color: #ff5c5c;
+    user-select: none;
+    animation: float 8s ease-in-out infinite alternate;
+  }
+  @keyframes float {
+    from { transform: translateY(0) rotate(var(--rot)); }
+    to   { transform: translateY(-18px) rotate(calc(var(--rot) + 12deg)); }
+  }
+main{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-image: url('verr.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+h1{
+    font-family: 'Great Vibes';
+    font-size : 34px;
+    text-align:center;
+    font-weight:bold;
+}
+p{
+    font-family: 'M PLUS 1p';
+}
+.container, .hero, .date_box, .dress-code{
+    display:flex;
+    flex-direction: column;
+}
+.container{
+    position: relative ;
+    width:auto;
+    margin: 50px 30px;
+    padding: 25px 20px;
+
+    overflow:visible;
+}
+/* .bg-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  min-width: 90%; 
+  min-height: 90%;
+  
+  z-index: -1;
+} */
+.hero{
+    justify-content:center;
+    align-items:center;
+    margin: 32px 0 16px 0;
+}
+.date{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    border-top: 1px solid black;border-bottom: 1px solid black;
+    justify-content: space-around;
+    margin-bottom: 8px;
+}
+.big__p{
+    font-size: 26px;
+    font-weight:bold;
+}
+.date_box{
+    align-items: center;
+    justify-content: center;
+}
+.adress{
+    margin-bottom: 16px;
+}
+.adress p{
+    text-align: center;
+}
+.dress-cod{
+    justify-content:center;
+    text-align: center;
+}
+.palitra{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 6px 0;
+    flex-wrap:nowrap;
+    column-gap: 8px;
+}
+.palitra_box{
+    border-radius:50%;
+}
+.palitra_box:first-child{
+    background-color:rgb(165, 42, 95);
+}
+.palitra_box:last-child{
+    background-color:rgb(255, 157, 200);
+}
+.palitra_box:nth-child(2){
+    background-color:rgb(247, 0, 107);
+}
+
+.palitra_box{
+    height: 50px;
+    width: 50px;
+}
+
