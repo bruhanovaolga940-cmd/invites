@@ -39,6 +39,7 @@ main{
     height: 100vh;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
     /* background-image: url('verr.png');
   background-repeat: no-repeat;
   background-position: center;
