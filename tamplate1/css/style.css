@@ -8,7 +8,6 @@ body {
 	display: flex;
 	flex-direction: column;
 	letter-spacing: -0.5px;
-    /* background-color: rgb(255, 235, 215); */
     color:rgb(25, 0, 11);
     box-sizing:boder-box;
 }
@@ -64,7 +63,6 @@ p{
     z-index: 1;
     position: relative ;
     width:auto;
-    margin: auto;
     padding: 25px 20px;
 background: #ffe9e0;
 background: radial-gradient(circle, rgb(250, 240, 233) 15%, rgba(238, 240, 242, 0) 100%);
