@@ -51,7 +51,9 @@ h1{
     font-weight:bold;
 }
 p{
-    font-family: 'M PLUS 1p';
+    font-family: 'Cormorant Garamond';
+    font-size: 16px;
+    font-weight: 600;
 }
 .container, .hero, .date_box, .dress-code{
     display:flex;
@@ -78,7 +80,7 @@ background: radial-gradient(circle, rgb(250, 240, 233) 15%, rgba(238, 240, 242, 
     flex-wrap: nowrap;
     border-top: 1px solid black;border-bottom: 1px solid black;
     justify-content: space-around;
-    margin-bottom: 8px;
+    margin-bottom: 16px;
 }
 .big__p{
     font-size: 26px;
@@ -131,7 +133,7 @@ background: radial-gradient(circle, rgb(250, 240, 233) 15%, rgba(238, 240, 242, 
   position: fixed;
   z-index: -1; /* Уводит картинки на самый задний план, под контент */
   pointer-events: none; /* Позволяет кликать и выделять текст сквозь картинки */
-  width: 100px; /* Ограничиваем максимальный размер картинок (настройте под себя) */
+  width: 150px; /* Ограничиваем максимальный размер картинок (настройте под себя) */
   height: auto;
 }
 }
