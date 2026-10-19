@@ -46,14 +46,14 @@ main{
 }
 h1{
     font-family: 'Great Vibes';
-    font-size : 34px;
+    font-size : 40px;
     text-align:center;
     font-weight:bold;
 }
 p{
     font-family: 'Cormorant Garamond';
-    font-size: 16px;
-    font-weight: 600;
+    font-size: 18px;
+    font-weight: 400;
 }
 .container, .hero, .date_box, .dress-code{
     display:flex;
@@ -64,9 +64,12 @@ p{
     position: relative ;
     width:auto;
     padding: 25px 20px;
-background: #ffe9e0;
+background: #fdfdfd;
 background: radial-gradient(circle, rgb(250, 240, 233) 15%, rgba(238, 240, 242, 0) 100%);
     overflow:visible;
+}
+section{
+    
 }
 .hero{
     justify-content:center;
@@ -79,18 +82,25 @@ background: radial-gradient(circle, rgb(250, 240, 233) 15%, rgba(238, 240, 242, 
     flex-wrap: nowrap;
     border-top: 1px solid black;border-bottom: 1px solid black;
     justify-content: space-around;
-    margin-bottom: 16px;
+    margin: 8px 20px 16px 20px;
+    
 }
 .big__p{
-    font-size: 26px;
+    font-size: 32px;
     font-weight:bold;
 }
 .date_box{
     align-items: center;
     justify-content: center;
 }
+.date__month p{
+    font-size: 24px;
+}
+.date__year p{
+    font-size: 24px;
+}
 .adress{
-    margin-bottom: 16px;
+    margin-bottom:16px;
 }
 .adress p{
     text-align: center;
